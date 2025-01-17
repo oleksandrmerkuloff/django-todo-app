@@ -25,3 +25,5 @@ If you need to work with admin part of application create superuser using this c
 Now let's make the App live. We just need to start the server now and then we can start using our simple todo App. Start the server by following command
 
 `python3 manage.py runserver`
+
+After all you get simple django app which could help you to improve yourself:)

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('home page')
+    return render(request, 'task_manager/index.html')
 
 
 def add(request):

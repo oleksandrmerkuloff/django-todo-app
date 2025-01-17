@@ -1,0 +1,43 @@
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+#add-task-form {
+    margin: 30px auto
+}
+
+#task-text-input {
+    padding: 5px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+#add-btn {
+    padding: 5px;
+    width: 15%;
+    border-color: rgb(16, 122, 172);
+    border-radius: 10px;
+    font-weight: 700;
+    color: rgb(16, 122, 172);
+}
+
+#add-btn:hover {
+    background-color: rgb(172, 16, 122);
+    opacity: 0.7;
+}
+
+#tasks-container {
+    width: 30%;
+    margin: 0 auto;
+    min-height: 720px;
+    padding-top: 50px;
+}
+
+.task {
+    padding: 15px;
+    margin: 0 auto;
+    min-width: 40%;
+    border: 1px solid rgb(88, 79, 79);
+    border-radius: 10px;
+}

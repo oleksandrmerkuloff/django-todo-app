@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "task_manager/index.css" %}">
+    <title>Home page</title>
+</head>
+<body>
+    <div id="tasks-container">
+        <h1>Your tasks</h1>
+        <form method="post" id="add-task-form">
+            {% csrf_token %}
+            <input type="text" placeholder="Write new task" id="task-text-input">
+            <input type="submit" value="ADD" id="add-btn">
+        </form>
+        {% for task in "12345" %}
+            <div class="task">
+                <input type="checkbox" id="{{ task }}" {% if task == "3" %}checked{% endif %}>
+                <label for="{{ task }}">{{ task }}</label>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -18,8 +18,11 @@
         </form>
         {% for task in "12345" %}
             <div class="task">
-                <input type="checkbox" id="{{ task }}" {% if task == "3" %}checked{% endif %}>
-                <label for="{{ task }}">{{ task }}</label>
+                <div class="task-data">
+                    <input type="checkbox" id="{{ task }}" {% if task == "3" %}class="strikethrough" checked{% endif %}>
+                    <label for="{{ task }}">{{ task }}</label>
+                </div>
+                <a href="" class="delete-btn">Delete</a>
             </div>
         {% endfor %}
     </div>

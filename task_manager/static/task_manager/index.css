@@ -40,4 +40,27 @@
     min-width: 40%;
     border: 1px solid rgb(88, 79, 79);
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.delete-btn {
+    text-decoration: none;
+    padding: 5px;
+    width: 10%;
+    border: 1px solid rgb(121, 121, 230);
+    border-color: rgb(16, 122, 172);
+    border-radius: 10px;
+    font-weight: 700;
+    color: rgb(16, 122, 172);
+    text-align: center;
+}
+
+.delete-btn:hover {
+    background-color: rgb(172, 16, 122);
+    opacity: 0.7;
 }

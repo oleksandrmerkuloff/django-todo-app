@@ -11,16 +11,19 @@
 <body>
     <div id="tasks-container">
         <h1>Your tasks</h1>
-        <form method="post" id="add-task-form">
+        <form method="post" id="add-task-form" action="{% url "add-task" %}">
             {% csrf_token %}
-            <input type="text" placeholder="Write new task" id="task-text-input">
+            <input type="text" placeholder="Write new task" id="task-text-input" name="task-title">
             <input type="submit" value="ADD" id="add-btn">
         </form>
-        {% for task in "12345" %}
+        {% for task in task_list %}
             <div class="task">
                 <div class="task-data">
-                    <input type="checkbox" id="{{ task }}" {% if task == "3" %}class="strikethrough" checked{% endif %}>
-                    <label for="{{ task }}">{{ task }}</label>
+                    <form action="{% url "update" task.id %}" method="post">
+                        {% csrf_token %}
+                        <input type="checkbox" id="{{ task.title }}" name="task_checkbox" onchange="this.form.submit()" {% if task.is_completed %}checked{% endif %}>
+                        <label for="{{ task.title }}" {% if task.is_completed %}class="strikethrough"{% endif %}>{{ task.title }}</label>
+                    </form>
                 </div>
                 <a href="" class="delete-btn">Delete</a>
             </div>

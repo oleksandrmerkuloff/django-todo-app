@@ -1,6 +1,6 @@
 # Django Task Manager
 
-This is a simple task manager up. If you need project for tests or learning django just download this repo
+This is a simple task manager app. If you need project for tests or learning django just download this repo
 
 ### Setup
 
@@ -10,7 +10,7 @@ Update your System
 
 To get this repository, run the following command inside your git enabled terminal
 
-`git clone https://github.com/yeshwanthlm/django-on-ec2.git`
+`git clone https://github.com/oleksandrmerkuloff/django-todo-app.git`
 
 You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
 

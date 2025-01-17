@@ -19,13 +19,13 @@
         {% for task in task_list %}
             <div class="task">
                 <div class="task-data">
-                    <form action="{% url "update" task.id %}" method="post">
+                    <form action="{% url "update-task" task.id %}" method="post">
                         {% csrf_token %}
                         <input type="checkbox" id="{{ task.title }}" name="task_checkbox" onchange="this.form.submit()" {% if task.is_completed %}checked{% endif %}>
                         <label for="{{ task.title }}" {% if task.is_completed %}class="strikethrough"{% endif %}>{{ task.title }}</label>
                     </form>
                 </div>
-                <a href="" class="delete-btn">Delete</a>
+                <a href="{% url 'delete-task' task.id %}" class="delete-btn">Delete</a>
             </div>
         {% endfor %}
     </div>

@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
 
 from .models import Task
 
@@ -32,4 +31,6 @@ def update(request, task_id):
 
 
 def delete(request, task_id):
-    return HttpResponse(f'delete task {task_id}')
+    task = get_object_or_404(Task, pk=task_id)
+    task.delete()
+    return redirect('home')

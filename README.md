@@ -4,7 +4,7 @@ This is a simple task manager app. If you need project for tests or learning dja
 
 ### Setup
 
-Update your System
+Update your system
 
 `sudo apt-get update`
 
